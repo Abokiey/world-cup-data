@@ -1,0 +1,275 @@
+1
+00:00:00,790 --> 00:00:07,750
+For this project, we will be using Google Cloud as Google Cloud provides high computational power and
+
+2
+00:00:08,740 --> 00:00:16,240
+convolutional neural network or deep learning request that in this project we will be creating a convolutional
+
+3
+00:00:16,240 --> 00:00:20,650
+neural network, which will be able to predict some species of the bird.
+
+4
+00:00:22,510 --> 00:00:29,500
+We will create this network using different Typekit parameters like activation functions, learning
+
+5
+00:00:29,500 --> 00:00:36,040
+rate, but size ebooks and we will build train and test this multiclass classification model.
+
+6
+00:00:38,590 --> 00:00:40,120
+This project is used.
+
+7
+00:00:40,420 --> 00:00:42,490
+This project is based on Get us.
+
+8
+00:00:42,790 --> 00:00:43,570
+We will be using it.
+
+9
+00:00:43,570 --> 00:00:43,960
+Get us.
+
+10
+00:00:44,830 --> 00:00:45,880
+So let's get started.
+
+11
+00:00:46,510 --> 00:00:51,970
+So initially, first we will mount the Google drive on our colored notebook so that we can use that
+
+12
+00:00:51,970 --> 00:00:53,740
+dataset directly from our drive.
+
+13
+00:00:55,330 --> 00:00:58,300
+And for this, you first need to upload the data on your drive.
+
+14
+00:00:58,690 --> 00:00:59,980
+And then we will mount this.
+
+15
+00:01:00,370 --> 00:01:07,330
+So by running this command from Google Collab Import Drive and Drive Dot Mount, we are mounting over
+
+16
+00:01:07,810 --> 00:01:09,700
+Google Drive to Google Cloud.
+
+17
+00:01:10,000 --> 00:01:11,140
+So let's run this well.
+
+18
+00:01:13,240 --> 00:01:18,040
+So he will see that it will ask you an authorization code and in order to generate this authorization
+
+19
+00:01:18,040 --> 00:01:19,550
+code, you need to run this order.
+
+20
+00:01:21,820 --> 00:01:23,800
+So I'll go to my analytics account.
+
+21
+00:01:26,290 --> 00:01:34,470
+We need to allow this and copied this verification code authorization code.
+
+22
+00:01:34,840 --> 00:01:37,600
+So here you'll paste that code and press into.
+
+23
+00:01:40,160 --> 00:01:46,790
+To show us that our drivers mounted so you can see that our drivers mounted act content.
+
+24
+00:01:48,740 --> 00:01:54,990
+So after executing after mounting the drive, the next step would be to locate the folder wherever data
+
+25
+00:01:55,040 --> 00:01:58,580
+is stored on the Google Cloud to Google Cloud.
+
+26
+00:01:59,360 --> 00:02:07,490
+So here you can see that we will run this command, but is less content to drive my life.
+
+27
+00:02:07,940 --> 00:02:08,690
+Let's run this.
+
+28
+00:02:12,140 --> 00:02:19,850
+So here in my drive, I have started with the name of bird species dataset, so we will know that in
+
+29
+00:02:19,850 --> 00:02:20,330
+the next.
+
+30
+00:02:25,860 --> 00:02:32,850
+So this is the most important step here we are importing some of the required libraries here, you can
+
+31
+00:02:32,850 --> 00:02:42,720
+see that we are importing some very important libraries from very important functions for CNN from cameras,
+
+32
+00:02:42,720 --> 00:02:43,280
+not layers.
+
+33
+00:02:43,290 --> 00:02:49,770
+We are importing the layers that we will be using that is going to be max pooling 2D activation, flatten
+
+34
+00:02:50,100 --> 00:02:55,830
+out dense will split our data using escalator models election train to split.
+
+35
+00:02:56,760 --> 00:03:01,820
+We will create a sequential model, so we need to import that using catastrophic models that optimize
+
+36
+00:03:01,830 --> 00:03:02,790
+what we are going to use.
+
+37
+00:03:03,000 --> 00:03:03,620
+Optimizer.
+
+38
+00:03:04,620 --> 00:03:05,070
+Adam.
+
+39
+00:03:07,760 --> 00:03:14,780
+And similarly, all other libraries for one or two, including for open TV operations, for visualizing
+
+40
+00:03:14,780 --> 00:03:18,980
+the images, might not see CV two numbers and wonder.
+
+41
+00:03:20,180 --> 00:03:24,860
+So let's run the sale and import all the required libraries that we that we need.
+
+42
+00:03:29,470 --> 00:03:31,840
+So you can see that all of the libraries are important.
+
+43
+00:03:32,500 --> 00:03:38,230
+So in the next step and show you how we can visualize some of the images that we will be working on.
+
+44
+00:03:38,620 --> 00:03:41,560
+Also, we will observe the dimensions of these images.
+
+45
+00:03:42,040 --> 00:03:44,350
+So here you can see that have stepped up the part.
+
+46
+00:03:45,700 --> 00:03:52,450
+I'm using the migratory bird species dataset and in that we are using a particular folder that is American
+
+47
+00:03:52,450 --> 00:04:00,880
+Goldfinch and I have created a loop which will support my images for images in a row.
+
+48
+00:04:02,380 --> 00:04:09,070
+And we are taking images from American Goldfinch folder, and we will display around 17 images, 17
+
+49
+00:04:09,070 --> 00:04:09,970
+and 16 images.
+
+50
+00:04:12,730 --> 00:04:17,170
+So let's visualize those images and see what type of images we will be working on.
+
+51
+00:04:17,440 --> 00:04:22,300
+And what are the dimensions of these images, so we should be sure that all the images have the same
+
+52
+00:04:22,300 --> 00:04:24,460
+dimensions in order to create a model.
+
+53
+00:04:25,390 --> 00:04:29,980
+So here you can see you can visualize that these are the images that we will be working on.
+
+54
+00:04:30,490 --> 00:04:36,310
+And as you can see here, the dimensions of the images that seem to 24 to 24 for all the images.
+
+55
+00:04:39,660 --> 00:04:45,450
+So now let's move forward now we will set the record directly for the dataset we are using, and we
+
+56
+00:04:45,450 --> 00:04:49,800
+are also storing the last names of the dataset.
+
+57
+00:04:51,000 --> 00:04:52,920
+We will also create two empty list.
+
+58
+00:04:55,670 --> 00:04:57,860
+For images and limbs, so let's run this.
+
+59
+00:05:01,890 --> 00:05:06,800
+So after this, we are reading the images and we are converting it into an attic.
+
+60
+00:05:07,860 --> 00:05:13,650
+Similarly, we will also append the list created above with that image and let us label head in this
+
+61
+00:05:14,100 --> 00:05:14,690
+for look.
+
+62
+00:05:14,730 --> 00:05:18,630
+You can see that we are converting it into an attic.
+
+63
+00:05:19,590 --> 00:05:24,770
+And similarly, we are appending the list that we have created above and adding its label.
+
+64
+00:05:25,800 --> 00:05:26,640
+So let's run this.
+
+65
+00:05:29,290 --> 00:05:35,240
+To take some time because there are around 2000 images, thousand nine hundred images, so it will take
+
+66
+00:05:35,240 --> 00:05:42,500
+some time to read them, convert them into an added and also up in the list created with the image and
+
+67
+00:05:42,500 --> 00:05:43,040
+its label.
+
+68
+00:05:49,870 --> 00:05:57,070
+So it took me from 10 to 15 minutes for commodities added to buy at it.
+
+69
+00:05:59,590 --> 00:06:03,280
+So now let's move forward now, let us visualize.
