@@ -1,0 +1,175 @@
+1
+00:00:00,060 --> 00:00:05,730
+The number of classes that we are using, so we the number of classes that we are using and how much
+
+2
+00:00:05,730 --> 00:00:06,600
+data they contain.
+
+3
+00:00:07,200 --> 00:00:09,900
+So we are checking for the data balancing here.
+
+4
+00:00:11,910 --> 00:00:18,210
+You can see that we are using around one, two, three, four, five and six classes with data.
+
+5
+00:00:19,640 --> 00:00:25,010
+Around 140 I 140, 41 in each cluster, so there is no data imbalance.
+
+6
+00:00:26,730 --> 00:00:27,740
+Now let's move forward.
+
+7
+00:00:28,610 --> 00:00:33,860
+We'll find out the number of places that will be working on and stored it into a variable that we will
+
+8
+00:00:33,860 --> 00:00:36,620
+be using it later in the model architecture.
+
+9
+00:00:38,570 --> 00:00:44,120
+So as I already told you, we're are working on six classes six species of birds.
+
+10
+00:00:46,150 --> 00:00:51,610
+Next, we will check the check, the shape of image and a single image.
+
+11
+00:00:54,270 --> 00:00:59,700
+So here you can see that we have already visualized that image above, and it was showing us 2.4 by
+
+12
+00:00:59,700 --> 00:01:00,360
+2.4.
+
+13
+00:01:00,660 --> 00:01:03,120
+And as it does a color device, the channel will be three.
+
+14
+00:01:03,120 --> 00:01:04,170
+That is the art you.
+
+15
+00:01:06,330 --> 00:01:11,820
+Now, let us check the shape of the image labels, which will be equal to the number of images that
+
+16
+00:01:11,820 --> 00:01:13,200
+we will be working on.
+
+17
+00:01:15,960 --> 00:01:18,510
+So here we can see that there are eight one one labels.
+
+18
+00:01:18,930 --> 00:01:21,090
+So we will be working on it one one.
+
+19
+00:01:21,150 --> 00:01:23,210
+That is it.
+
+20
+00:01:23,220 --> 00:01:28,410
+One one unique image is four different species of birds.
+
+21
+00:01:30,330 --> 00:01:34,860
+Now let us test to split our data using the Ashkelon.
+
+22
+00:01:35,940 --> 00:01:41,480
+You can see that we are splitting our data in two extreme x, just inviting latest using between the
+
+23
+00:01:41,490 --> 00:01:46,750
+split, and we're passing the image list and label Leicester City data to be split.
+
+24
+00:01:46,750 --> 00:01:49,170
+And we are setting the size 0.2.
+
+25
+00:01:49,410 --> 00:01:53,990
+So it will split in two 80 percent for training and 20 percent for testing.
+
+26
+00:01:55,240 --> 00:01:59,500
+Let's run this and split our data, so after this.
+
+27
+00:02:00,890 --> 00:02:02,660
+This is one of the most important step.
+
+28
+00:02:03,530 --> 00:02:07,340
+So here we are, normalizing the images by dividing them with 255.
+
+29
+00:02:08,060 --> 00:02:10,890
+And also we are reshaping the extreme and expressed.
+
+30
+00:02:11,930 --> 00:02:20,180
+So let's run this and normalize our images and also reshape our images in the extreme and expressed.
+
+31
+00:02:21,220 --> 00:02:29,540
+So after this, we will be labeled by analyzing our data that is not encoding our data to one.
+
+32
+00:02:29,540 --> 00:02:37,670
+Hot and coding is important because it will stop our data from getting prioritized, stop our classes
+
+33
+00:02:37,670 --> 00:02:38,530
+from getting prioritized.
+
+34
+00:02:39,110 --> 00:02:41,130
+We will also print the sequence of the classes.
+
+35
+00:02:41,180 --> 00:02:41,900
+Let's run this.
+
+36
+00:02:44,390 --> 00:02:47,300
+So here you can see that these are the classes that we will be working on.
+
+37
+00:02:50,250 --> 00:02:57,360
+These are American Goldfinch Barn Owl, Carmine Bita, Downy Woodpecker, Emperor Penguin and Flamingo.
+
+38
+00:02:57,480 --> 00:03:01,980
+These are the six classes of the birds six bird species that we will be working on.
+
+39
+00:03:03,360 --> 00:03:09,960
+Now, the next important step is to split that data, the training data into validation data and training
+
+40
+00:03:09,960 --> 00:03:10,290
+data.
+
+41
+00:03:10,590 --> 00:03:18,510
+So we are splitting the Extreme X, right wherever there's interest in disparate split and we are passing
+
+42
+00:03:18,510 --> 00:03:20,670
+the extreme and whitest white data here.
+
+43
+00:03:20,910 --> 00:03:25,170
+Similarly, the test size is same, but it's 80 20 percent.
+
+44
+00:03:27,240 --> 00:03:27,420
+So.

@@ -1,0 +1,115 @@
+1
+00:00:02,020 --> 00:00:06,160
+Hello and welcome to this project on bird species prediction.
+
+2
+00:00:07,990 --> 00:00:14,560
+So in this project, we will create a convolutional neural network that is a CNN, and it will be able
+
+3
+00:00:14,560 --> 00:00:18,160
+to predict a species of a bird with the image that we supply.
+
+4
+00:00:18,910 --> 00:00:20,230
+So what will do?
+
+5
+00:00:20,260 --> 00:00:26,650
+We will use different layers and other hyper parameters for building, training and testing this multiclass
+
+6
+00:00:26,650 --> 00:00:27,730
+classification model.
+
+7
+00:00:28,510 --> 00:00:30,790
+And in this project, we will be using get us.
+
+8
+00:00:34,450 --> 00:00:41,470
+So the steps we need to take, we need to make this CNN or to solve this problem are firstly and show
+
+9
+00:00:41,470 --> 00:00:46,060
+you how you can mount your Google drive on your with your colored notebook.
+
+10
+00:00:47,350 --> 00:00:52,930
+This is important because after this, you don't need to download the data locally on your system.
+
+11
+00:00:52,930 --> 00:00:56,980
+You can just connect your drive to your Google Cloud.
+
+12
+00:00:58,390 --> 00:01:00,940
+We will visualize the images that we will be working on.
+
+13
+00:01:01,690 --> 00:01:06,910
+After that, we will analyze the dimensions to verify all the images have same dimensions or not.
+
+14
+00:01:08,830 --> 00:01:13,420
+The next step would be converting these images into a number and we will normalize them.
+
+15
+00:01:14,410 --> 00:01:17,020
+After that, we will check for class imbalance.
+
+16
+00:01:17,170 --> 00:01:22,900
+If all the classes have same data or not, all the classes have same images or not same number of images.
+
+17
+00:01:23,740 --> 00:01:28,570
+After that, we will split the data and perform one two encoding on target paper.
+
+18
+00:01:30,370 --> 00:01:31,810
+Next, we will create the model.
+
+19
+00:01:32,380 --> 00:01:40,420
+Architecture will compile the model and and then we put the model after that will plot the accuracy
+
+20
+00:01:40,420 --> 00:01:42,040
+and the lost against each epoch.
+
+21
+00:01:43,570 --> 00:01:46,990
+Then we will reprocess the test data and make predictions on it.
+
+22
+00:01:47,710 --> 00:01:52,630
+And in the end, we will visualize the original and predicted movement for one of the test image.
+
+23
+00:01:54,550 --> 00:02:00,790
+So this project, it can be used for educational purposes because it will get you a better idea of how
+
+24
+00:02:00,790 --> 00:02:02,500
+you can create a CNN.
+
+25
+00:02:03,610 --> 00:02:10,630
+You can, for the hyper parameter, doomed the model we will create to reach a hierarchy or to avoid
+
+26
+00:02:10,630 --> 00:02:11,260
+overthinking.
+
+27
+00:02:12,630 --> 00:02:16,190
+It can be used by both centuries to identify different types of words.
+
+28
+00:02:18,760 --> 00:02:23,440
+So let's start this project in the Google collab.
+
+29
+00:02:29,980 --> 00:02:30,940
+For this project.
